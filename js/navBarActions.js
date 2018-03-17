@@ -1,12 +1,13 @@
-var myNav = document.getElementById('mynav');
+function getBodyScrollTop () { const el = document.scrollingElement || document.documentElement; return el.scrollTop }
 window.onscroll = function () { 
+
     "use strict";
-    if (document.body.scrollTop >= 200 ) {
-        myNav.classList.add("navbar-expand-sm-colored");
-        myNav.classList.remove("navbar-expand-sm-transparent");
+    if (getBodyScrollTop() >= 150 ) {
+        $('.navbar-custom').addClass('navbar-colored');
     } 
     else {
-        myNav.classList.add("navbar-expand-sm-transparent");
-        myNav.classList.remove("navbar-expand-sm-colored");
+        
+        $('.navbar-custom').removeClass('navbar-colored');
     }
+   
 };

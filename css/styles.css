@@ -1,21 +1,27 @@
-.navbar {
+.navbar-custom {
     background-color: rgba(0,0,0,0);
+    transition: all 0.50s ease;
 }
 /* change the brand and text color */
-.navbar .navbar-brand,
+.navbar-custom .navbar-brand,
 .navbar .navbar-text {
     color: rgba(255,255,255,.8);
 }
 /* change the link color */
-.navbar .navbar-nav .nav-link {
+.navbar-custom .navbar-nav .nav-link {
     color: rgba(255,255,255,.5);
 }
 
-
+#backgroundimage{
+    width:150%;
+    display:center;
+    align-items: center;
+   
+}
   
- .navbar-expand-sm-colored{background-color: #000}
+ .navbar-custom.navbar-colored{background-color: rgba(0, 0, 0, 0.664)}
 
- .navbar-expand-sm-transparent{background-color: transparent}
+ 
 
 
 
