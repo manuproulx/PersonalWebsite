@@ -30,12 +30,37 @@
     font-size: 6em;
     text-align: center;
     overflow: hidden;
+}
+
+body{
     font-family: 'Raleway', sans-serif;
 }
+
 
 #typedtext::after{
     content: "_";
     animation: blink 300ms linear infinite alternate;
+}
+
+#selectionDiv{
+    display: flex;
+    position: fixed;
+    bottom: 80px;
+
+    font-size: 2em;
+    width: 100%;
+    justify-content: center;
+}
+
+#arrowDownDiv{
+    display:flex;
+    flex-direction: column;
+}
+
+#arrowDown{
+    display:flex;
+    justify-content:center;
+    font-size:3em;
 }
 
 
