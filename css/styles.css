@@ -23,13 +23,12 @@
 
  
  .line-1{
-    position: relative;
-    top: 50%;  
-    width: 50%;
-    margin-top:150px;
-    font-size: 6em;
+    position: relative; 
+    margin-top:24vh;
+    font-size: 8vh;
     text-align: center;
     overflow: hidden;
+    color:black;
 }
 
 body{
@@ -47,14 +46,30 @@ body{
     position: fixed;
     bottom: 80px;
 
-    font-size: 2em;
+
     width: 100%;
     justify-content: center;
+
 }
 
 #arrowDownDiv{
+    cursor: pointer;
     display:flex;
     flex-direction: column;
+    opacity:0;
+    font-size: 3.5vh;
+    animation: fade-in 1.5s normal forwards ease-in-out;
+    transition: font-size 500ms;
+}
+
+#arrowDownDiv:hover{
+    
+    font-size:4vh;
+}
+
+@keyframes fade-in{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 #arrowDown{
