@@ -1,6 +1,6 @@
 // set up text to print, each item in array is new line
 var aText = new Array(
-    "< I like to build great things />");
+    "<I like to build great things/>");
 var iSpeed = 125; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[0].length; // the length of the text array
@@ -18,7 +18,7 @@ function typewriter() {
     while (iRow < iIndex) {
         sContents += aText[iRow++] + '<br />';
     }
-    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos);
+    destination.innerText = sContents + aText[iIndex].substring(0, iTextPos);
     if (iTextPos++ == iArrLength) {
         iTextPos = 0;
         iIndex++;
