@@ -17,20 +17,26 @@ function typewriter() {
 
     while (iRow < iIndex) {
         sContents += aText[iRow++] + '<br />';
+        
     }
     destination.innerText = sContents + aText[iIndex].substring(0, iTextPos);
     if (iTextPos++ == iArrLength) {
         iTextPos = 0;
         iIndex++;
+      
         setTimeout("appendDownArrow()", 1000)
         if (iIndex != aText.length) {
             iArrLength = aText[iIndex].length;
             setTimeout("typewriter()", 500);
+        
+           
 
         }
     } else {
 
         setTimeout("typewriter()", iSpeed);1
+  
+        
     }
 }
 
@@ -48,4 +54,10 @@ function appendDownArrow(){
     icon.innerHTML = "keyboard_arrow_down"
     document.getElementById("arrowDownDiv").appendChild(text)
     document.getElementById("arrowDownDiv").appendChild(icon)
+   /* $('.text').html(function(i, html) {
+        var chars = $.trim(html).split("");
+      
+        return '<span>' + chars.join('</span><span>') + '</span>';
+      });*/
+    
 }
