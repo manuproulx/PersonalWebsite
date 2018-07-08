@@ -24,7 +24,6 @@
  
  .line-1{
     position: relative; 
-    margin-top:24vh;
     font-size: 8vh;
     text-align: center;
     overflow: hidden;
@@ -44,7 +43,7 @@ body{
 #selectionDiv{
     display: flex;
     position: fixed;
-    bottom: 80px;
+    bottom: 5vh;
 
 
     width: 100%;
