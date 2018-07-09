@@ -45,6 +45,9 @@ setTimeout("typewriter()", 1000)
 function appendDownArrow(){
     var button = document.createElement("div")
     button.setAttribute("id", "arrowDownDiv")
+    button.onclick = function(){
+        fullpage_api.moveSectionDown()
+    }
     document.getElementById("selectionDiv").appendChild(button)
     var text = document.createElement("span")
     text.innerHTML = "Take the tour"
