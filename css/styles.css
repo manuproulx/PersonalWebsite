@@ -38,6 +38,7 @@ body{
 #typedtext::after{
     content: "_";
     animation: blink 300ms linear infinite alternate;
+    -webkit-animation: blink 300ms linear infinite alternate;
 }
 
 #selectionDiv{
@@ -57,6 +58,7 @@ body{
     flex-direction: column;
     opacity:0;
     font-size: 3.5vh;
+    -webkit-animation: fade-in 1.5s normal forwards ease-in-out;
     animation: fade-in 1.5s normal forwards ease-in-out;
     transition: font-size 500ms;
 }
