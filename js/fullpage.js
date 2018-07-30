@@ -3109,8 +3109,9 @@
         */
         function displayWarnings(){
             if(!isLicenseValid){
-                showError('error', 'Fullpage.js version 3 has changed its license to GPLv3 and it requires a `licenseKey` option. Read about it here:');
-                showError('error', 'https://github.com/alvarotrigo/fullPage.js#options.');
+                //This project is in compliance with GPLv3, therefore I simply comment these two lines to remove console errors. :-)
+                //showError('error', 'Fullpage.js version 3 has changed its license to GPLv3 and it requires a `licenseKey` option. Read about it here:');
+                //showError('error', 'https://github.com/alvarotrigo/fullPage.js#options.');
             }
 
             var extensions = ['fadingEffect', 'continuousHorizontal', 'scrollHorizontally', 'interlockedSlides', 'resetSliders', 'responsiveSlides', 'offsetSections', 'dragAndMove', 'scrollOverflowReset', 'parallax'];
