@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
+    "lodash": "^4.17.11",
     "netlify-cli": "^2.11.11",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "semantic-ui-react": "^0.87.1",
+    "typewriter-effect": "^2.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
