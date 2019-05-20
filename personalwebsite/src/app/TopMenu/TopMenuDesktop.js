@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { Menu, Header } from 'semantic-ui-react';
 
 const TopMenuDesktop = ({ leftItems }) => (
-    <Menu fixed="top" inverted>
+    <Menu fixed="top" inverted style={{ height: '75px', opacity: '0.9' }}>
       <Menu.Item>
         <Header as="h1" style={{ color: 'white' }}>
             Emmanuel Proulx

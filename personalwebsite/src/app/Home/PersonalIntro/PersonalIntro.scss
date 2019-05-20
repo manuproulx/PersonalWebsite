@@ -1,0 +1,27 @@
+.ui.card>.content>.header, .ui.cards>.card>.content>.header {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.PersonalIntro {
+    &__Card {
+        flex-direction: 'row';
+        margin: 50px;
+        @media(max-width: 993px) {
+            flex-direction: column;
+            margin: 30px 10px;
+        }
+        &__Image {
+            border-radius: 10px 0 0 10px;
+            @media(max-width: 993px) {
+                border-radius: 10px 10px 0 0;
+            }
+        }
+
+        &__Text {
+            margin: 50px;
+            @media(max-width: 993px) {
+                margin: 20px;
+            }
+        }
+    }
+}

@@ -26,5 +26,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@craco/craco": "^5.1.0",
+    "cpy-cli": "^2.0.0",
+    "craco-less": "^1.7.0",
+    "semantic-ui-less": "^2.4.1"
+  }
 }
