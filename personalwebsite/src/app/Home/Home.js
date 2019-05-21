@@ -25,7 +25,7 @@ class Home extends React.Component {
         return (
             <React.Fragment>
             <div style={{ position: 'relative', boxShadow: '0px 6px 13px 0px rgba(0,0,0,0.49)' }}>     
-            <div style={{ position: 'absolute', top: '350px', zIndex: '2', width: '100%', textAlign: 'center'}}>
+            <div style={{ position: 'absolute', top: '250px', zIndex: '2', width: '100%', textAlign: 'center'}}>
                 <Typewriter 
                     onInit={typewriter => {
                         typewriter
