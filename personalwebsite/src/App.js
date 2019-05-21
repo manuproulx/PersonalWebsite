@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import TopMenu from './app/TopMenu/TopMenu';
 import Home from './app/Home/Home';
+import Experience from './app/Experience/Experience';
 
 class App extends Component {
   render() {
@@ -15,9 +16,7 @@ class App extends Component {
       <div className="App">
         <TopMenu leftItems={leftItems}>
           <Home />
-          <div style={{height: '1000px'}}>
-
-          </div>
+          <Experience />
         </TopMenu>
       </div>
     );
