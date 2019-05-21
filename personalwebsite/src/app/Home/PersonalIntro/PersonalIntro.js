@@ -4,7 +4,7 @@ import './PersonalIntro.scss';
 
 const PersonalIntro = ({ filter }) => (
     <Container className="PersonalIntro">
-        <div className="PersonalIntro__Card" style={{ display: 'flex', borderRadius: '10px', boxShadow: '0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5'}}>
+        <div className="PersonalIntro__Card">
             <div>
                 <Image style={{ filter: `grayscale(${(100 - filter)}%)` }} className="PersonalIntro__Card__Image" src={require('../../../assets/me.jpg')}/>
             </div>

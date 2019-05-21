@@ -44,7 +44,7 @@ class Education extends React.Component {
                     </Step>
                     <Step link onClick={() => this.selectDiploma(1)} active={selectedDiploma === 1}>
                         <Step.Content>
-                            <Step.Title>Software engineering</Step.Title>
+                            <Step.Title>Software Engineering</Step.Title>
                             <Step.Description>Bachelor's degree</Step.Description>
                         </Step.Content>
                     </Step>
