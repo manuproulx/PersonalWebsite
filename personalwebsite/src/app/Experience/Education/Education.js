@@ -52,11 +52,11 @@ class Education extends React.Component {
                 <Transition visible={selectedDiploma !== null} animation="slide down">
                     <Segment attached>
                         <Grid columns={2} divided>
-                            <Grid.Column>
+                            <Grid.Column width={12}>
                                 <Header as="h2">{selectedSchool && selectedSchool.school} <a href={selectedSchool && selectedSchool.website}>[website]</a></Header>
                                 <Header as="h4">{selectedSchool && selectedSchool.location}</Header>
                             </Grid.Column>
-                            <Grid.Column>
+                            <Grid.Column width={4}>
                                 <Header as="h3">{selectedSchool && selectedSchool.year}</Header>
                             </Grid.Column>
                         </Grid>
