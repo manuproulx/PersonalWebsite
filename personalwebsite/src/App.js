@@ -3,6 +3,7 @@ import './App.scss';
 import TopMenu from './app/TopMenu/TopMenu';
 import Home from './app/Home/Home';
 import Experience from './app/Experience/Experience';
+import Projects from './app/Projects/Projects';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
         <TopMenu leftItems={leftItems}>
           <Home />
           <Experience />
+          <Projects />
         </TopMenu>
       </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Step, Transition, Segment, Grid, Image } from 'semantic-ui-react';
+import { Header, Step, Segment, Grid, Image } from 'semantic-ui-react';
 import './WorkExperience.scss';
 
 class WorkExperience extends React.Component {
@@ -50,22 +50,20 @@ class WorkExperience extends React.Component {
                         </Step.Content>
                     </Step>
                 </Step.Group>
-                <Transition visible={selectedExperience !== null} animation="slide down">
-                    <Segment attached>
+                {selectedExperience !== null && <Segment attached>
                         <Grid columns={2} divided>
-                            <Grid.Column width={12}>
+                            <Grid.Column computer={12} mobile={16}>
                                 <Header style={{ marginBottom: '-15px' }} as="h2">{selectedWork && selectedWork.company} <a href={selectedWork && selectedWork.website}>[website]</a></Header>
                                 <Header as="h4">{selectedWork && selectedWork.location}</Header>
                                 <p><b>Technologies used: </b>{selectedWork && selectedWork.techUsed}</p>
                                 <p><b>Main tasks: </b>{selectedWork && selectedWork.mainTasks}</p>
                             </Grid.Column>
-                            <Grid.Column width={4}>
+                            <Grid.Column mobile={16} computer={4}>
                                 <Header as="h3">{selectedWork && selectedWork.year}</Header>
                             </Grid.Column>
                         </Grid>
 
-                    </Segment>
-                </Transition>
+                    </Segment>}
 
             </div>
         )

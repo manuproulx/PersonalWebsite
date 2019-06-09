@@ -1,0 +1,13 @@
+.GitHub {
+    margin: 50px;
+    @media(max-width: 993px) {
+        margin: 10px;
+    }
+    .ui.statistic {
+        .value {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+    }
+}

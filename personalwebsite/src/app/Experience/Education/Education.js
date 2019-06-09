@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Step, Segment, Grid, Transition } from 'semantic-ui-react';
+import { Header, Step, Segment, Grid } from 'semantic-ui-react';
 import './Education.scss';
 
 class Education extends React.Component {
@@ -49,20 +49,18 @@ class Education extends React.Component {
                         </Step.Content>
                     </Step>
                 </Step.Group>
-                <Transition visible={selectedDiploma !== null} animation="slide down">
-                    <Segment attached>
+                {selectedDiploma !== null && <Segment attached>
                         <Grid columns={2} divided>
-                            <Grid.Column width={12}>
+                            <Grid.Column computer={12} mobile={16}>
                                 <Header as="h2">{selectedSchool && selectedSchool.school} <a href={selectedSchool && selectedSchool.website}>[website]</a></Header>
                                 <Header as="h4">{selectedSchool && selectedSchool.location}</Header>
                             </Grid.Column>
-                            <Grid.Column width={4}>
+                            <Grid.Column computer={4} mobile={16}>
                                 <Header as="h3">{selectedSchool && selectedSchool.year}</Header>
                             </Grid.Column>
                         </Grid>
 
-                    </Segment>
-                </Transition>
+                    </Segment>}
 
             </div>
         )
