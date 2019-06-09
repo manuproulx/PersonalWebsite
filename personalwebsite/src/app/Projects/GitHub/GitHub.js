@@ -101,14 +101,14 @@ class GitHub extends React.Component {
         const { githubData } = this.state;
         return (
             <div className="GitHub">
-                <Header as="h1">GitHub</Header>
+                <Header as="h1">GitHub <Icon name="github" /></Header>
                     {githubData ? (
                         <div ref={this.animationRef}>
                             <Segment.Inline style={{ display: 'flex', justifyContent: 'center' }}>
                                 <Statistic.Group>
                                     
                                     <Statistic>
-                                        <Statistic.Value>
+                                        <Statistic.Value text>
                                             <CountUp duration={4} easingFn={easingFn} delay={0.5} start={0} end={githubData.commitsCount}>
                                             {({ countUpRef, start }) => {
                                                this.startAnimationMethods.push(start);
@@ -123,7 +123,7 @@ class GitHub extends React.Component {
                                         <Statistic.Label>Commits</Statistic.Label>
                                     </Statistic>
                                     <Statistic>
-                                        <Statistic.Value>
+                                        <Statistic.Value text>
                                             <CountUp duration={4} easingFn={easingFn} delay={0.5} start={0} end={githubData.repositoriesCount}>
                                             {({ countUpRef, start }) => {
                                                this.startAnimationMethods.push(start);
@@ -139,7 +139,7 @@ class GitHub extends React.Component {
                                         <Statistic.Label>Repositories</Statistic.Label>
                                     </Statistic>
                                     <Statistic>
-                                        <Statistic.Value>
+                                        <Statistic.Value text>
                                             <CountUp duration={4} easingFn={easingFn} delay={0.5} start={0} end={githubData.issuesCount}>
                                             {({ countUpRef, start }) => {
                                                this.startAnimationMethods.push(start);
@@ -155,7 +155,7 @@ class GitHub extends React.Component {
                                         <Statistic.Label>Issues</Statistic.Label>
                                     </Statistic>
                                     <Statistic>
-                                        <Statistic.Value>
+                                        <Statistic.Value text>
                                             <CountUp duration={4} easingFn={easingFn} delay={0.5} start={0} end={githubData.starCount}>
                                                 {({ countUpRef, start }) => {
                                                 this.startAnimationMethods.push(start);
@@ -166,7 +166,7 @@ class GitHub extends React.Component {
                                                     )
                                                 } }
                                             </CountUp>
-                                            <Icon name="star outline" size="tiny" color="yellow" />
+                                            <Icon style={{ marginLeft: '5px' }} name="star outline" size="small" color="yellow" />
                                         </Statistic.Value>
                                         <Statistic.Label>Starred repositories</Statistic.Label>
                                     </Statistic> 

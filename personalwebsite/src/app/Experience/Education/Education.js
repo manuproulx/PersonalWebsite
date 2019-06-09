@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Step, Segment, Grid } from 'semantic-ui-react';
+import { Header, Step, Segment, Grid, Icon } from 'semantic-ui-react';
 import './Education.scss';
 
 class Education extends React.Component {
@@ -29,7 +29,7 @@ class Education extends React.Component {
         const selectedSchool = educationData[selectedDiploma];
         return (
             <div className="Education">
-                <Header as="h1">Education</Header>
+                <Header as="h1">Education <Icon name="university" /></Header>
                 <Step.Group attached="top" widths={3}>
                     <Step>
                         <Step.Content>
