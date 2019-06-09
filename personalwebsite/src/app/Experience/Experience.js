@@ -5,10 +5,12 @@ import Education from './Education/Education';
 import WorkExperience from './WorkExperience/WorkExperience';
 
 const Experience = () => (
-    <Container className="Experience">
-        <Education/>
-        <WorkExperience />
-    </Container>
+    <div style={{ backgroundColor: 'rgba(243, 243, 243, 0.88)',padding:'1px 0' }}>
+        <Container className="Experience">
+            <Education/>
+            <WorkExperience />
+        </Container>
+    </div>
 );
 
 export default Experience;

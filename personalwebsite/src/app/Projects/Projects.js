@@ -6,9 +6,11 @@ import './Projects.scss';
 class Projects extends React.Component {
     render() {
         return (
-            <Container className="Projects">
-                <GitHub />
-            </Container>
+            <div>
+                <Container className="Projects">
+                    <GitHub />
+                </Container>
+            </div>
         )
     }
 }

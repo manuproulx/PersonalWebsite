@@ -9,7 +9,7 @@ const TopMenuDesktop = ({ leftItems }) => (
             Emmanuel Proulx
         </Header>
       </Menu.Item>
-      {_.map(leftItems, item => <Menu.Item {...item} style={{ padding: '0 4.2vw', textAlign: 'center', fontSize: '1.25rem' }} />)}
+      {_.map(leftItems, item => <Menu.Item {...item} style={{ padding: '0 100px', textAlign: 'center', fontSize: '1.25rem' }} />)}
     </Menu>
   );
 

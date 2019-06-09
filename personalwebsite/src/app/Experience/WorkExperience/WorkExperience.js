@@ -36,14 +36,14 @@ class WorkExperience extends React.Component {
                 <Header as="h1">Professional experience <Icon name="briefcase"/></Header>
                 <Step.Group attached="top" widths={2}>
                     <Step link onClick={() => this.selectDiploma(0)} active={selectedExperience === 0}>
-                        <Image src={require('../../../assets/safran.png')} style={{ width: '75px', margin: '0 20px' }} />
+                        <Image src={require('../../../assets/safran.png')} style={{ width: '75px', margin: '10px 20px' }} />
                         <Step.Content>
                             <Step.Title>Safran Landing Systems</Step.Title>
                             <Step.Description>Web developer [internship]</Step.Description>
                         </Step.Content>
                     </Step>
                     <Step link onClick={() => this.selectDiploma(1)} active={selectedExperience === 1}>
-                        <Image src={require('../../../assets/paragonfaction.png')} style={{ width: '90px', margin: '0 20px' }} />
+                        <Image src={require('../../../assets/paragonfaction.png')} style={{ width: '90px', margin: '10px 20px' }} />
                         <Step.Content>
                             <Step.Title>Paragon Faction</Step.Title>
                             <Step.Description>Web developer [internship]</Step.Description>

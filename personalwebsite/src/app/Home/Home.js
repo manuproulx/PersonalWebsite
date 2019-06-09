@@ -29,14 +29,14 @@ class Home extends React.Component {
                 <Typewriter 
                     onInit={typewriter => {
                         typewriter
-                        .pauseFor(2500)
+                        .pauseFor(1500)
                         .typeString('<')
                         .typeString('I like to build')
-                        .pauseFor(500)
+                        .pauseFor(300)
                         .typeString(' ')
-                        .pauseFor(750)
+                        .pauseFor(500)
                         .typeString('great things')
-                        .pauseFor(250)
+                        .pauseFor(200)
                         .typeString('/>')
                         .start()
                     }}

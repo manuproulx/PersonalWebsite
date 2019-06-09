@@ -89,7 +89,7 @@ class GitHub extends React.Component {
     }
 
     checkForAnimationStart = () => {
-        if (this.animationRef.current && this.animationRef.current.getBoundingClientRect().y < window.outerHeight && !this.state.animationStarted) {
+        if (this.animationRef.current && this.animationRef.current.getBoundingClientRect().y < (window.outerHeight - 200) && !this.state.animationStarted) {
             this.startAnimationMethods.map(startMethod => startMethod())
             this.setState({ animationStarted: true })
         }
@@ -104,7 +104,7 @@ class GitHub extends React.Component {
                 <Header as="h1">GitHub <Icon name="github" /></Header>
                     {githubData ? (
                         <div ref={this.animationRef}>
-                            <Segment.Inline style={{ display: 'flex', justifyContent: 'center' }}>
+                            <Segment.Inline style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px' }}>
                                 <Statistic.Group>
                                     
                                     <Statistic>
@@ -187,9 +187,13 @@ class GitHub extends React.Component {
                                             </Card.Description>
                                         </Card.Content>
                                         <Card.Content>
-                                            {item.languages.nodes.map(language => (
-                                                <p key={language.name + item.name} style={{ color: colorPalette[language.name] }}>{language.name}</p>
-                                            ))}
+                                            <span style={{ display: 'flex', justifyContent: 'center' }}>{item.languages.nodes.map((language, index) => (
+                                                <p key={language.name + item.name} style={{ color: colorPalette[language.name], marginLeft: '5px' }}>
+                                                    {language.name}
+                                                    {index < item.languages.nodes.length - 1 &&(' /')}
+                                                </p>
+                                            ))}</span>
+                                            
                                         </Card.Content>
                                     </Card>
                                 ))}
