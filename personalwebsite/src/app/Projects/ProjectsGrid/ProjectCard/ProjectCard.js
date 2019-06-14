@@ -14,7 +14,7 @@ const ProjectCard = ({
                 <Card.Description>{description}</Card.Description>
             </Card.Content>
             {(github || website) && (
-                <Card.Content style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }} >
+                <Card.Content extra style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }} >
                     {github && (
                         <a href={github}>
                             <Icon name="github"/>
