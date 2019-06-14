@@ -25,24 +25,24 @@ class Home extends React.Component {
         return (
             <React.Fragment>
             <div style={{ position: 'relative', boxShadow: '0px 6px 13px 0px rgba(0,0,0,0.49)' }}>     
-            <div style={{ position: 'absolute', top: '250px', zIndex: '2', width: '100%', textAlign: 'center'}}>
-                <Typewriter 
-                    onInit={typewriter => {
-                        typewriter
-                        .pauseFor(1500)
-                        .typeString('<')
-                        .typeString('I like to build')
-                        .pauseFor(300)
-                        .typeString(' ')
-                        .pauseFor(500)
-                        .typeString('great things')
-                        .pauseFor(200)
-                        .typeString('/>')
-                        .start()
-                    }}
-                />
-            </div>
-            <Image src={require("../../assets/mtl.jpg")} style={{ filter: `grayscale(${filter}%)`, objectFit: 'cover',minHeight: '100vh', minWidth: '100vw' }}/>
+                <div className="TypewriterContainer">
+                    <Typewriter 
+                        onInit={typewriter => {
+                            typewriter
+                            .pauseFor(1500)
+                            .typeString('<')
+                            .typeString('I like to build')
+                            .pauseFor(300)
+                            .typeString(' ')
+                            .pauseFor(500)
+                            .typeString('great things')
+                            .pauseFor(200)
+                            .typeString('/>')
+                            .start()
+                        }}
+                    />
+                </div>
+                <Image src={require("../../assets/mtl.jpg")} style={{ filter: `grayscale(${filter}%)`, objectFit: 'cover',minHeight: '100vh', minWidth: '100vw' }}/>
             </div>
             <PersonalIntro filter={profileFilter}/>
             </React.Fragment>
