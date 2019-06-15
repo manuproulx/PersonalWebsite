@@ -39,18 +39,18 @@ const projects = [
 
 const ProjectsGrid = () => (
     <div className="ProjectsGrid" >
-        <Header as="h1">Projects <Icon name="book" /></Header>
+        <Header as="h1"><Icon name="book" />Projects</Header>
         <Responsive maxWidth={993}>
             <Card.Group style={{ display: 'flex', justifyContent: 'center'}}>
                 {projects.map(project => (
-                    <ProjectCard {...project} />
+                    <ProjectCard  key={project.name} {...project} />
                 ))}
             </Card.Group>
         </Responsive>
         <Responsive minWidth={994}>
             <Card.Group itemsPerRow={2} style={{ display: 'flex', justifyContent: 'center'}}>
                 {projects.map(project => (
-                    <ProjectCard {...project} />
+                    <ProjectCard  key={project.name} {...project} />
                 ))}
             </Card.Group>
         </Responsive>

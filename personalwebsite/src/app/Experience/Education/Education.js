@@ -29,7 +29,7 @@ class Education extends React.Component {
         const selectedSchool = educationData[selectedDiploma];
         return (
             <div className="Education">
-                <Header as="h1">Education <Icon name="university" /></Header>
+                <Header as="h1"><Icon name="university" />Education</Header>
                 <Step.Group attached="top" widths={3}>
                     <Step>
                         <Step.Content>

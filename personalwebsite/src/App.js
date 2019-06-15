@@ -4,6 +4,7 @@ import TopMenu from './app/TopMenu/TopMenu';
 import Home from './app/Home/Home';
 import Experience from './app/Experience/Experience';
 import Projects from './app/Projects/Projects';
+import Contact from './app/Contact/Contact';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Home />
           <Experience />
           <Projects />
+          <Contact />
         </TopMenu>
       </div>
     );

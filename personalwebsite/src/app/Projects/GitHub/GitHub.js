@@ -101,7 +101,7 @@ class GitHub extends React.Component {
         const { githubData } = this.state;
         return (
             <div className="GitHub">
-                <Header as="h1">GitHub <Icon name="github" /></Header>
+                <Header as="h1"><Icon name="github" />GitHub</Header>
                     {githubData ? (
                         <div ref={this.animationRef}>
                             <Segment.Inline style={{ display: 'flex', justifyContent: 'center', marginBottom: '50px' }}>

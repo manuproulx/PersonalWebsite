@@ -1,0 +1,44 @@
+import React from 'react';
+import { Header, Icon, Card } from 'semantic-ui-react';
+import SocialMediaLink from './SocialMediaLink/SocialMediaLink';
+
+const socialMedia = [
+    {
+        platform: 'Twitter',
+        link: 'https://twitter.com/ProulxEmmanuel',
+        handle: '@ProulxEmmanuel',
+        icon: 'twitter',
+        color: '#38A1F3'
+    },
+    {
+        platform: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/emmanuel-proulx-546853155/',
+        icon: 'linkedin',
+        handle: 'Emmanuel Proulx',
+        color: '#0077B5'
+    },
+    {
+        platform: 'instagram',
+        link: 'https://www.instagram.com/manu_proulx/',
+        icon: 'instagram',
+        handle: '@manu_proulx',
+        color: 'black'
+    }
+];
+
+const SocialMedia = () => (
+    <div className="SocialMedia">
+        <Header as="h1">
+            <Icon name="user circle" />
+            Social media
+        </Header>
+        <Card.Group centered>
+           {socialMedia.map(link => (
+               <SocialMediaLink {...link} key={link.platform} />
+           ))}
+        </Card.Group>
+
+    </div>
+);
+
+export default SocialMedia;

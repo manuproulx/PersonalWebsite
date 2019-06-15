@@ -33,7 +33,7 @@ class WorkExperience extends React.Component {
         const selectedWork = experienceData[selectedExperience];
         return (
             <div className="WorkExperience">
-                <Header as="h1">Professional experience <Icon name="briefcase"/></Header>
+                <Header as="h1"><Icon name="briefcase"/> Professional experience</Header>
                 <Step.Group attached="top" widths={2}>
                     <Step link onClick={() => this.selectDiploma(0)} active={selectedExperience === 0}>
                         <Image src={require('../../../assets/safran.png')} style={{ width: '75px', margin: '10px 20px' }} />
