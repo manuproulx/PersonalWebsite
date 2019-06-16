@@ -1,0 +1,30 @@
+.ui.card>.content>.header, .ui.cards>.card>.content>.header {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.PersonalIntro {
+    &__Card {
+        display: flex;
+        border-radius: .28571429rem;
+        box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+        flex-direction: row;
+        margin: 50px;
+        @media(max-width: 993px) {
+            flex-direction: column;
+            margin: 30px 10px;
+        }
+        &__Image {
+            border-radius: .28571429rem 0 0 .28571429rem;
+            @media(max-width: 993px) {
+                border-radius: .28571429rem .28571429rem 0 0;
+            }
+        }
+
+        &__Text {
+            margin: 50px;
+            @media(max-width: 993px) {
+                margin: 20px;
+            }
+        }
+    }
+}
