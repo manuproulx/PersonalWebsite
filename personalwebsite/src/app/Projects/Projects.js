@@ -15,7 +15,7 @@ class Projects extends React.Component {
 
     componentDidMount() {
         const { onSetRefToSection } = this.props;
-        onSetRefToSection(this.ref.current.offsetTop + 100);
+        onSetRefToSection(this.ref.current.offsetTop);
     }
 
     render() {

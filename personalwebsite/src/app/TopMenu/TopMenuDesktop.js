@@ -7,7 +7,7 @@ class TopMenuDesktop extends React.Component {
   render() {
     const scrollToSection = section => {
       const { sections } = this.props;
-      window.scrollTo(0, sections[section] - 90 || 0);
+      window.scrollTo(0, sections[section] || 0);
     }
     const { leftItems } = this.props;
     return (

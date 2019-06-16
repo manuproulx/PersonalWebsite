@@ -12,7 +12,7 @@ class PersonalIntro extends React.Component {
 
     componentDidMount() {
         const { onSetRefToSection } = this.props;
-        onSetRefToSection(this.ref.current.offsetTop);
+        onSetRefToSection(this.ref.current.offsetTop - 100);
     }
 
     render() {
