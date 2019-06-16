@@ -1,15 +1,9 @@
 import React from 'react';
 import { Header, Placeholder, Segment, Statistic, Icon, Card, Button } from 'semantic-ui-react';
-import ApolloClient, { gql } from 'apollo-boost';
 import CountUp from 'react-countup';
+import { connect } from 'react-redux';
+import { fetchGitHubAPI } from '../../../actions/github';
 import './GitHub.scss';
-
-const client = new ApolloClient({
-    uri: "https://api.github.com/graphql",
-    headers: {
-        authorization: `Bearer ${process.env.REACT_APP_GITHUB}`
-    }
-})
 
 const colorPalette = {
     Kotlin: '#00AA55',
@@ -21,39 +15,6 @@ const colorPalette = {
     Dart: '#005031',
     'Objective-C': '#1C2833' 
 }
-
-const GET_USER = gql`
-{ 
-    user(login:"kovy42") {
-        url,
-        contributionsCollection {
-          totalIssueContributions,
-          totalCommitContributions,
-          totalRepositoryContributions
-        },
-        pinnedItems(last:4) {
-          nodes {
-            ... on Repository {
-              name,
-              languages(first:3) {
-                nodes {
-                  name
-                }
-              },
-              url,
-              description,
-              owner{
-                  login
-              }
-            }
-          }
-        },
-        starredRepositories(first:100) {
-          totalCount
-        }
-      }
-  }
-`;
 
 const easingFn = function(t, b, c, d) {
 	var ts=(t/=d)*t;
@@ -71,16 +32,8 @@ class GitHub extends React.Component {
     startAnimationMethods = [];
 
     componentDidMount() {
-       client.query({
-           query: GET_USER
-       }).then(result => this.setState({ githubData: {
-           commitsCount: result.data.user.contributionsCollection.totalCommitContributions,
-           issuesCount: result.data.user.contributionsCollection.totalIssueContributions,
-           repositoriesCount: result.data.user.contributionsCollection.totalRepositoryContributions,
-            pinnedItems: result.data.user.pinnedItems.nodes,
-            starCount: result.data.user.starredRepositories.totalCount,
-            url: result.data.user.url
-       } }));
+        const { onFetchGitHub } = this.props;
+        onFetchGitHub();
     }
     
     constructor(props) {
@@ -98,7 +51,7 @@ class GitHub extends React.Component {
     render() {
         document.onscroll = () => this.checkForAnimationStart();
         this.startAnimationMethods = []
-        const { githubData } = this.state;
+        const { githubData } = this.props;
         return (
             <div className="GitHub">
                 <Header as="h1"><Icon name="github" />GitHub</Header>
@@ -222,6 +175,14 @@ class GitHub extends React.Component {
             </div>
         )
     }
-}
+};
 
-export default GitHub;
+const mapStateToProps = state => ({
+    githubData: state.github.gitHubData
+});
+
+const mapDispatchToProps = dispatch => ({
+    onFetchGitHub: () => dispatch(fetchGitHubAPI())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(GitHub);

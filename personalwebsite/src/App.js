@@ -9,8 +9,8 @@ import Contact from './app/Contact/Contact';
 class App extends Component {
   render() {
     const leftItems = [
-      { as: "a", content: "About me", key: "about-me" },
-      { as: "a", content: "My work", key: "work" },
+      { as: "a", content: "About me", key: "aboutme" },
+      { as: "a", content: "My work", key: "mywork" },
       { as: "a", content: "Contact", key: "contact" }
     ];
     return (
