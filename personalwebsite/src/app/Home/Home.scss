@@ -34,22 +34,11 @@
 .Background {
     min-height: 200vh;
     min-width: 100vw;
-    position: relative;
-
-    &::before {
-        background-image: url("../../assets/mtl.jpg");
-        background-repeat: no-repeat; 
-        background-position: 50%;
-        background-size: cover;
-        content: '';
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        will-change: transform;
-        position: absolute;
-        background-attachment: fixed;
-    }
+    background-image: url("../../assets/mtl.jpg");
+    background-repeat: no-repeat; 
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Safari-only hack; disable fixed background since it lags the app */
@@ -57,9 +46,7 @@
 { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
     .Background {
         min-height: 100vh;
-        &::before {
-            background-attachment: scroll;
-        }
+        background-attachment: scroll;
     }
     
 }}
