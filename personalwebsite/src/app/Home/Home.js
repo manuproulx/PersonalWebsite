@@ -42,7 +42,7 @@ class Home extends React.Component {
                         }}
                     />
                 </div>
-                <div className="Background" style={{ backgroundImage: `url(${Background})`, filter: `grayscale(${filter}%)` }}/>
+                <div className="Background" style={{ background: `url(${Background}) no-repeat 50% fixed / cover`, filter: `grayscale(${filter}%)` }}/>
             </div>
             <PersonalIntro filter={profileFilter}/>
             </React.Fragment>
