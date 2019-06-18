@@ -49,7 +49,7 @@ class GitHub extends React.Component {
     }
 
     render() {
-        document.onscroll = () => this.checkForAnimationStart();
+        window.addEventListener('scroll', this.checkForAnimationStart.bind(this), true)
         this.startAnimationMethods = []
         const { githubData } = this.props;
         return (
