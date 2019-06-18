@@ -16,7 +16,6 @@ class Email extends React.Component {
     }
 
     handleFormSubmit = e => {
-        console.log('hey');
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
