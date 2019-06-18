@@ -1,8 +1,8 @@
 import React from 'react';
-import { Image } from 'semantic-ui-react';
 import Typewriter from 'typewriter-effect';
 import './Home.scss';
 import PersonalIntro from './PersonalIntro/PersonalIntro';
+import Background from '../../assets/mtl.jpg';
 
 class Home extends React.Component {
     state = {
@@ -42,7 +42,7 @@ class Home extends React.Component {
                         }}
                     />
                 </div>
-                <Image src={require("../../assets/mtl.jpg")} style={{ filter: `grayscale(${filter}%)`, objectFit: 'cover',minHeight: '100vh', minWidth: '100vw' }}/>
+                <div className="Background" style={{ backgroundImage: `url(${Background})`, filter: `grayscale(${filter}%)` }}/>
             </div>
             <PersonalIntro filter={profileFilter}/>
             </React.Fragment>
