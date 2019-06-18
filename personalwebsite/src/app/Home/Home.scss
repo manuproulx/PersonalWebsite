@@ -3,7 +3,7 @@
     font-size: 4.5rem;
     font-family: 'Insolata', monospace;
     line-height: 1;
-    background: radial-gradient(circle, rgba(0,0,0,0.5354342420561975) 0%, rgba(255,255,255,0) 67%);
+    background: radial-gradient(circle,rgba(0,0,0,0.5354342420561975) 0,hsla(0,0%,0%,0) 67%);
     @media(max-width: 993px) {
         font-size: 3rem;
     }
