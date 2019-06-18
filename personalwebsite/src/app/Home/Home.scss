@@ -32,7 +32,7 @@
 }
 
 .Background {
-    min-height: 100vh;
+    min-height: 200vh;
     min-width: 100vw;
     position: relative;
 
@@ -48,7 +48,18 @@
         top: 0;
         will-change: transform;
         position: absolute;
-        background-attachment: fixed
+        background-attachment: fixed;
     }
-
 }
+
+/* Safari-only hack; disable fixed background since it lags the app */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .Background {
+        min-height: 100vh;
+        &::before {
+            background-attachment: scroll;
+        }
+    }
+    
+}}
