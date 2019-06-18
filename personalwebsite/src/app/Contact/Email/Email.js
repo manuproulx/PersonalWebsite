@@ -6,7 +6,8 @@ const Email = () => (
     <div className="Email">
         <Divider hidden horizontal />
         <Header as="h1"><Icon name="mail"/> Contact me</Header>
-        <Form netlify className="Email__Form" name="contact" method="POST" data-netlify="true">
+        <Form className="Email__Form" name="contact" method="POST">
+            <input type="hidden" name="form-name" value="contact" />
             <Form.Field>
                 <label>Your name</label>
                 <Input type="text" name="name" placeholder="Name"/>
