@@ -1,25 +1,13 @@
 import React from 'react';
 import { Container, Image, Header } from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import { setRefToSection } from '../../../actions/sections';
 import './PersonalIntro.scss';
 
 class PersonalIntro extends React.Component {
-    constructor(props){
-        super(props);
-        this.ref = React.createRef();
-    }
-
-    componentDidMount() {
-        const { onSetRefToSection } = this.props;
-        onSetRefToSection(this.ref.current.offsetTop - 100);
-    }
-
     render() {
         const { filter } = this.props;
         return (
             <Container className="PersonalIntro">
-                <div ref={this.ref} className="PersonalIntro__Card">
+                <div className="PersonalIntro__Card">
                     <div>
                         <Image style={{ filter: `grayscale(${(100 - filter)}%)` }} className="PersonalIntro__Card__Image" src={require('../../../assets/me.jpg')} />
                     </div>
@@ -35,10 +23,4 @@ class PersonalIntro extends React.Component {
     }
 };
 
-const mapDispatchToProps = dispatch => ({
-    onSetRefToSection: ref => dispatch(setRefToSection(ref, 'aboutme'))
-});
-
-
-
-export default connect(() => ({}), mapDispatchToProps)(PersonalIntro);
+export default PersonalIntro;

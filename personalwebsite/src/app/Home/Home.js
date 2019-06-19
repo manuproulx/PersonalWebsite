@@ -17,8 +17,8 @@ class Home extends React.Component {
 
     handleScroll = e => {
         this.setState({
-            filter: Math.min(window.pageYOffset * 100 / (window.innerHeight / 3), 100),
-            profileFilter: Math.max(0, (window.pageYOffset) * 100 / (window.innerHeight))
+            filter: Math.min(window.pageYOffset * 100 / (window.innerHeight), 100),
+            profileFilter: Math.max(0, (window.pageYOffset * 100) / (window.innerHeight * 2))
         });
     }
     render() {
