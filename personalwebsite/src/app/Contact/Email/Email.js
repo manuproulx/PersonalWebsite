@@ -12,7 +12,13 @@ class Email extends React.Component {
     state = {
         name: "",
         email: "",
-        message: ""
+        message: "",
+        button: {
+            color: null,
+            text: "Send",
+            icon: "mail outline",
+            disabled: true
+        }
     }
 
     handleFormSubmit = e => {
@@ -21,15 +27,70 @@ class Email extends React.Component {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...this.state })
           })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
+            .then(() => {
+                this.setState({
+                    name: "",
+                    email: "",
+                    message: "",
+                    button: {
+                        text: "Success!",
+                        color: "green",
+                        icon: "check",
+                        disabled: true
+                    }
+                })
+                setTimeout(() => this.setState({
+                    button: {
+                        color: null,
+                        text: "Send",
+                        icon: "mail outline",
+                        disabled: true
+                    }
+                }), 3000)
+            })
+            .catch(error => {
+                this.setState({
+                    name: "",
+                    email: "",
+                    message: "",
+                    button: {
+                        text: "Error",
+                        color: "red",
+                        icon: "close"
+                    }
+                });
+                setTimeout(() => this.setState({
+                    button: {
+                        color: null,
+                        text: "Send",
+                        icon: "mail outline",
+                        disabled: true
+                    }
+                }), 3000)
+            });
     
           e.preventDefault();
     };
 
-    handleChange = e => this.setState({ [e.target.name]: e.target.value });
+    contactMessageHasContent = () => {
+        const { name, email, message } = this.state;
+        return name.length > 0 && email.length > 0 && message.length > 0;
+    }
+
+    handleChange = e => {
+        this.setState({ [e.target.name]: e.target.value })
+        if (this.contactMessageHasContent()) {
+            this.setState({
+                button: {
+                    ...this.state.button,
+                    disabled: false
+                }
+            })
+        }
+    };
 
     render() {
+        const { name, email, message, button } = this.state;
         return (
             <div className="Email">
                 <Divider hidden horizontal />
@@ -38,17 +99,17 @@ class Email extends React.Component {
                     <input type="hidden" name="form-name" value="contact" />
                     <Form.Field>
                         <label>Your name</label>
-                        <Input onChange={this.handleChange} type="text" name="name" placeholder="Name" />
+                        <Input onChange={this.handleChange} type="text" name="name" placeholder="Name" value={name} />
                     </Form.Field>
                     <Form.Field>
                         <label>Your email</label>
-                        <Input iconPosition="left"  onChange={this.handleChange} placeholder="Email" type="email" name="email"><Icon name="at" /><input /></Input>
+                        <Input iconPosition="left" onChange={this.handleChange} placeholder="Email" type="email" name="email" value={email} ><Icon name="at" /><input /></Input>
                     </Form.Field>
                     <Form.Field>
                         <label>Your message</label>
-                        <TextArea onChange={this.handleChange} name="message" placeholder="Message" />
+                        <TextArea onChange={this.handleChange} name="message" placeholder="Message" value={message} />
                     </Form.Field>
-                    <Button basic type="submit"><Icon name="mail outline" />Send</Button>
+                    <Button disabled={button.disabled} basic color={button.color}  type="submit"><Icon name={button.icon} />{button.text}</Button>
                 </Form>
             </div>
         )
