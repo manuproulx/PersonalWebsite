@@ -1,6 +1,6 @@
 # Personal portofolio
 
-A small React app used as a small personal portfolio.
+A small React app used as a personal portfolio.
 
 ### Installing
 
