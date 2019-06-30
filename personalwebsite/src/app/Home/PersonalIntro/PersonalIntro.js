@@ -4,12 +4,11 @@ import './PersonalIntro.scss';
 
 class PersonalIntro extends React.Component {
     render() {
-        const { filter } = this.props;
         return (
             <Container className="PersonalIntro">
                 <div className="PersonalIntro__Card">
                     <div>
-                        <Image style={{ filter: `grayscale(${(100 - filter)}%)` }} className="PersonalIntro__Card__Image" src={require('../../../assets/me.jpg')} />
+                        <Image className="PersonalIntro__Card__Image" src={require('../../../assets/me.jpg')} />
                     </div>
                     <div className="PersonalIntro__Card__Text">
                         <Header as="h1">Nice to meet you.</Header>

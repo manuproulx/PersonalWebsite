@@ -5,8 +5,7 @@ import PersonalIntro from './PersonalIntro/PersonalIntro';
 
 class Home extends React.Component {
     state = {
-        filter: 0,
-        profileFilter: 100,
+        filter: 0
     }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
@@ -17,12 +16,11 @@ class Home extends React.Component {
 
     handleScroll = e => {
         this.setState({
-            filter: Math.min(window.pageYOffset * 100 / (window.innerHeight), 100),
-            profileFilter: Math.max(0, (window.pageYOffset * 100) / (window.innerHeight * 2))
+            filter: Math.min(window.pageYOffset * 100 / (window.innerHeight), 100)
         });
     }
     render() {
-        const { filter, profileFilter } = this.state;
+        const { filter } = this.state;
         return (
             <div>
                 <div style={{ position: 'relative', zIndex: '2' , boxShadow: '0px 6px 13px 0px rgba(0,0,0,0.49)' }}>
@@ -46,7 +44,7 @@ class Home extends React.Component {
                     </div>
                     <div className="Background" style={{ filter: `grayscale(${filter}%)` }} />
                 </div>
-                <PersonalIntro filter={profileFilter} />
+                <PersonalIntro />
             </div>
 
 
