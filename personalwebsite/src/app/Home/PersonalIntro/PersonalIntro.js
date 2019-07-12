@@ -12,7 +12,7 @@ class PersonalIntro extends React.Component {
                     </div>
                     <div className="PersonalIntro__Card__Text">
                         <Header as="h1">Nice to meet you.</Header>
-                        <p>I'm a 20 year-old undergraduate software engineering student from Montréal, Canada. I share a passion, amongst other things, for mobile and web development. You'll find on this website some of the work I had the chance to do in the past years, with a bit more insight on my professional experience. Feel free to reach out!</p>
+                        <p>I'm a 21 year-old undergraduate software engineering student from Montréal, Canada. I share a passion, amongst other things, for mobile and web development. You'll find on this website some of the work I had the chance to do in the past years, with a bit more insight on my professional experience. Feel free to reach out!</p>
                         <Image style={{ height: '80px' }} src={require('../../../assets/ep-signature.png')} />
                     </div>
 

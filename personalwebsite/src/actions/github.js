@@ -11,7 +11,7 @@ const client = new ApolloClient({
 
 const GET_USER = gql`
 { 
-    user(login:"kovy42") {
+    user(login:"manuproulx") {
         url,
         contributionsCollection {
           totalIssueContributions,

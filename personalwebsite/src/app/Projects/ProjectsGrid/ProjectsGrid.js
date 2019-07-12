@@ -30,10 +30,10 @@ const projects = [
     {
         name: 'Portfolio website',
         platform: 'React app with static content, GitHub GraphQL API fetching',
-        description: 'Small single-page portfolio website for presentation of personal projects.',
+        description: 'Small single-page portfolio website for yarnpresentation of personal projects.',
         image: 'portfoliowebsite.jpg',
         website: 'https://emmanuelproulx.com',
-        github: 'https://github.com/kovy42/PersonalWebsite'
+        github: 'https://github.com/manuproulx/PersonalWebsite'
     }
 ]
 
