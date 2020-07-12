@@ -27,6 +27,14 @@ class WorkExperience extends React.Component {
                 website: 'https://linkedin.com/company/paragonfaction',
                 techUsed: 'Javascript (ES6), React, Semantic UI, FabricJS, GraphQL, MongoDB',
                 mainTasks: 'Work on new and existing features of Decksign, a business-oriented presentation software. Develop those features on the front-end (React) app, and back-end modules (FabricJS, GraphQL).'
+            },
+            {
+                company: 'Heyday',
+                location: 'Montréal, QC, Canada',
+                year: 'Winter 2020',
+                website: 'https://www.linkedin.com/company/heyday.ai/',
+                techUsed: 'Javascript (ES6), Angular, SASS',
+                mainTasks: 'Implement front-end components and widgets for the client dashboard of Heyday. Add third-party onboarding platforms in the app like Shopify, Shopify Ping, Panier Bleu and Tailbase. Implement integrations like Google My Business, Facebook Messenger, and a chat widget configuration.'
             }
         ]
         const { selectedExperience } = this.state;
@@ -34,7 +42,7 @@ class WorkExperience extends React.Component {
         return (
             <div className="WorkExperience">
                 <Header as="h1"><Icon name="briefcase"/> Professional experience</Header>
-                <Step.Group attached="top" widths={2}>
+                <Step.Group attached="top" widths={3}>
                     <Step link onClick={() => this.selectDiploma(0)} active={selectedExperience === 0}>
                         <Image src={require('../../../assets/safran.png')} style={{ width: '75px', margin: '10px 20px' }} />
                         <Step.Content>
@@ -46,7 +54,14 @@ class WorkExperience extends React.Component {
                         <Image src={require('../../../assets/paragonfaction.png')} style={{ width: '90px', margin: '10px 20px' }} />
                         <Step.Content>
                             <Step.Title>Paragon Faction</Step.Title>
-                            <Step.Description>Web developer [internship]</Step.Description>
+                            <Step.Description>Front-end developer [internship]</Step.Description>
+                        </Step.Content>
+                    </Step>
+                    <Step link onClick={() => this.selectDiploma(2)} active={selectedExperience === 2}>
+                        <Image src={require('../../../assets/heyday.jpeg')} style={{ width: '50px', margin: '10px 20px' }} />
+                        <Step.Content>
+                            <Step.Title>Heyday</Step.Title>
+                            <Step.Description>Front-end developer [internship]</Step.Description>
                         </Step.Content>
                     </Step>
                 </Step.Group>
