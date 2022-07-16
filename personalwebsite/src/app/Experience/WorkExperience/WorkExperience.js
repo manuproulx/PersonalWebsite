@@ -39,9 +39,9 @@ class WorkExperience extends React.Component {
             {
                 company: 'Stingray',
                 location: 'Montréal, QC, Canada',
-                year: 'Summer 2021',
+                year: 'Summer 2021 (internship)\nSeptember 2021 - Current',
                 website: 'https://www.stingray.com/',
-                techUsed: 'Ruby on Rails, SQL, Coffeescript',
+                techUsed: 'Ruby on Rails, React, PostgreSQL, Coffeescript, Slim, SASS',
                 mainTasks: 'As a developer in the Chatter Research team, I worked on building new features in the client dashboard, and refactoring/redesigning existing code.'
             }
         ]
@@ -76,7 +76,7 @@ class WorkExperience extends React.Component {
                         <Image src={require('../../../assets/logo-stingray.png')} style={{ width: '90px', margin: '10px 20px' }} />
                         <Step.Content>
                             <Step.Title>Stingray</Step.Title>
-                            <Step.Description>Full-stack developer [internship]</Step.Description>
+                            <Step.Description>Full-stack developer</Step.Description>
                         </Step.Content>
                     </Step>
                 </Step.Group>

@@ -1,9 +1,16 @@
 import React from 'react';
-import { Card, Header, Icon, Responsive } from 'semantic-ui-react';
+import { Card, Container, Header, Icon } from 'semantic-ui-react';
 import './ProjectsGrid.scss';
 import ProjectCard from './ProjectCard/ProjectCard';
 
 const projects = [
+    {
+        name: 'NFTicket',
+        platform: 'React app with Material UI library, Nest.js API and backend hosted on Appwrite',
+        description: 'NFT ticket marketplace platform hosted on the EOS blockchain that lets users create and customize their own events, and purchase tickets from any events. Event organizers could use app to scan QR codes and verify NFT authenticity.',
+        image: 'nfticket.png',
+        github: 'https://github.com/LOG795-Equipe-2/NFTicket-Frontend'
+    },
     {
         name: 'ÉTSMobile',
         platform: 'iOS (Swift) and Android (Kotlin) app',
@@ -40,20 +47,20 @@ const projects = [
 const ProjectsGrid = () => (
     <div className="ProjectsGrid" >
         <Header as="h1"><Icon name="book" />Projects</Header>
-        <Responsive maxWidth={993}>
+        <Container className="onlyMobile">
             <Card.Group style={{ display: 'flex', justifyContent: 'center'}}>
                 {projects.map(project => (
                     <ProjectCard  key={project.name} {...project} />
                 ))}
             </Card.Group>
-        </Responsive>
-        <Responsive minWidth={994}>
+        </Container>
+        <Container className="onlyDesktop">
             <Card.Group itemsPerRow={2} style={{ display: 'flex', justifyContent: 'center'}}>
                 {projects.map(project => (
                     <ProjectCard  key={project.name} {...project} />
                 ))}
             </Card.Group>
-        </Responsive>
+        </Container>
 
     </div>
 );

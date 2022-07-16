@@ -1,4 +1,14 @@
 .ProjectsGrid {
    text-align: center;
    padding: 50px 0;
+   .onlyMobile {
+      @media screen and (min-width: 994px) {
+         display: none;
+      } 
+   }
+   .onlyDesktop {
+      @media screen and (max-width: 993px) {
+         display: none;
+      } 
+   }
 }
